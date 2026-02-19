@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Near Taxi Service - Premium Travel in Goa</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Lottie Player -->
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+</head>
+<body>
+    
+    <!-- Page Loader -->
+    <div class="loader-wrapper">
+        <div class="loader-content">
+            <div class="cube-loader">
+                <div class="cube-top"></div>
+                <div class="cube-wrapper">
+                    <span style="--i:0" class="cube-span"></span>
+                    <span style="--i:1" class="cube-span"></span>
+                    <span style="--i:2" class="cube-span"></span>
+                    <span style="--i:3" class="cube-span"></span>
+                </div>
+            </div>
+            <div class="loader-text">Near<span>Taxi</span></div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-route"></i>
+                Near<span>Taxi</span>
+            </a>
+            <div class="nav-menu">
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="tours.html" class="nav-link">Tours</a>
+                <a href="gallery.html" class="nav-link">Gallery</a>
+                <a href="faq.html" class="nav-link">FAQ</a>
+                <a href="locations.html" class="nav-link">Locations</a>
+                <a href="contact.html" class="btn btn-primary btn-sm">Book Ride</a>
+            </div>
+            <div class="mobile-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container hero-wrapper">
+            <div class="hero-content">
+                <h1 class="reveal fade-up">Explore Goa in <br><span class="text-gradient">Ultimate Luxury</span></h1>
+                <p class="reveal fade-up delay-100">Experience the freedom of travel with our premium fleet. From airport transfers to coastal drives, we ensure every mile is a memory.</p>
+                
+                <div class="hero-actions reveal fade-up delay-200">
+                    <a href="contact.html" class="btn btn-primary btn-shine">
+                        Book Your Ride <i class="fas fa-arrow-right" style="margin-left: 8px;"></i>
+                    </a>
+                    <a href="services.html" class="btn btn-outline" style="color: white; border-color: rgba(255,255,255,0.3);">
+                        View Fleet
+                    </a>
+                </div>
+
+                <!-- Stats from Old Content -->
+                <div class="hero-stats reveal fade-up delay-300" style="display: flex; gap: 40px; margin-top: 50px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 30px;">
+                    <div>
+                        <h3 style="color: var(--accent); margin: 0; font-size: 2.5rem;">500+</h3>
+                        <p style="margin: 0; font-size: 0.9rem; color: rgba(255,255,255,0.7);">Daily Rides</p>
+                    </div>
+                    <div>
+                        <h3 style="color: var(--accent); margin: 0; font-size: 2.5rem;">100%</h3>
+                        <p style="margin: 0; font-size: 0.9rem; color: rgba(255,255,255,0.7);">Safe & Secure</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3D Visual -->
+            <div class="hero-visual reveal fade-left delay-200">
+                <!-- Floating Badges -->
+                <div class="floating-badge badge-1">
+                    <div class="badge-icon"><i class="fas fa-shield-alt" style="color: white;"></i></div>
+                    <div>
+                        <span style="display: block; font-size: 0.8rem; opacity: 0.8;">Safety First</span>
+                        <span>Verified Drivers</span>
+                    </div>
+                </div>
+                
+                <div class="floating-badge badge-2">
+                    <div class="badge-icon"><i class="fas fa-wifi" style="color: white;"></i></div>
+                    <div>
+                        <span style="display: block; font-size: 0.8rem; opacity: 0.8;">Onboard</span>
+                        <span>Free Wi-Fi</span>
+                    </div>
+                </div>
+
+                <lottie-player 
+                    src="https://lottie.host/embed/d6a36458-c0b4-43b6-963d-42460670987f/24G8v5.json" 
+                    background="transparent" 
+                    speed="1" 
+                    style="width: 120%; height: 120%; transform: scale(1.1);" 
+                    loop 
+                    autoplay>
+                </lottie-player>
+            </div>
+        </div>
+    </section>
+
+    <!-- Detailed Services (Old Content) -->
+    <section class="section" id="services">
+        <div class="container">
+            <div class="text-center reveal fade-up">
+                <h2 class="text-gradient">Our Services</h2>
+                <p>We provide comprehensive travel solutions for all your needs.</p>
+            </div>
+
+            <div class="grid grid-4" style="margin-top: 60px;">
+                <!-- Service 1 -->
+                <div class="glass-card reveal fade-up delay-100">
+                    <div class="feature-icon">
+                        <i class="fas fa-plane-departure"></i>
+                    </div>
+                    <h4 class="text-center">Airport Transfer</h4>
+                    <p class="text-center">On-time pickup and drop services to Dabolim and Mopa Airports.</p>
+                </div>
+                <!-- Service 2 -->
+                <div class="glass-card reveal fade-up delay-200">
+                    <div class="feature-icon">
+                        <i class="fas fa-train"></i>
+                    </div>
+                    <h4 class="text-center">Railway Pickup</h4>
+                    <p class="text-center">Hassle-free transfers from Madgaon, Thivim, and Vasco stations.</p>
+                </div>
+                <!-- Service 3 -->
+                <div class="glass-card reveal fade-up delay-300">
+                    <div class="feature-icon">
+                        <i class="fas fa-map-marked-alt"></i>
+                    </div>
+                    <h4 class="text-center">Goa Tours</h4>
+                    <p class="text-center">Customized sightseeing packages for North and South Goa.</p>
+                </div>
+                <!-- Service 4 -->
+                <div class="glass-card reveal fade-up delay-300">
+                    <div class="feature-icon">
+                        <i class="fas fa-road"></i>
+                    </div>
+                    <h4 class="text-center">Outstation Trips</h4>
+                    <p class="text-center">Comfortable long-distance rides to nearby cities and states.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us (Redesigned) -->
+    <section class="section" style="background: var(--surface);">
+        <div class="container">
+            <div class="grid grid-2" style="align-items: center; gap: 60px;">
+                <!-- Content -->
+                <div class="reveal fade-right">
+                    <h2 class="text-luxury">Why Choose Near Taxi?</h2>
+                    <p style="font-size: 1.1rem; opacity: 0.9; margin-bottom: 30px;">
+                        We are committed to providing the best travel experience in Goa with transparency, reliability, and absolute comfort.
+                    </p>
+                    
+                    <div class="feature-list">
+                        <!-- Feature 1 -->
+                        <div class="feature-item">
+                            <i class="fas fa-user-tie"></i>
+                            <div class="feature-text">
+                                <h4>Professional Drivers</h4>
+                                <p>Experienced, licensed, and polite drivers ensuring a smooth journey every time.</p>
+                            </div>
+                        </div>
+                        <!-- Feature 2 -->
+                        <div class="feature-item">
+                            <i class="fas fa-shield-virus"></i>
+                            <div class="feature-text">
+                                <h4>Safe & Sanitized</h4>
+                                <p>Regularly cleaned and sanitized premium cars for your absolute safety and hygiene.</p>
+                            </div>
+                        </div>
+                        <!-- Feature 3 -->
+                        <div class="feature-item">
+                            <i class="fas fa-money-bill-wave"></i>
+                            <div class="feature-text">
+                                <h4>Transparent Pricing</h4>
+                                <p>No hidden charges or surge pricing. Pay exactly what you see, with full clarity.</p>
+                            </div>
+                        </div>
+                        <!-- Feature 4 -->
+                        <div class="feature-item">
+                            <i class="fas fa-headset"></i>
+                            <div class="feature-text">
+                                <h4>24/7 Support</h4>
+                                <p>Our dedicated support team is always available to assist you, day or night.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Image -->
+                <div class="image-decoration reveal fade-left delay-200">
+                    <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=800&q=80" alt="Luxury Travel Experience">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Destinations (Old Content) -->
+    <section class="section" style="background: var(--background);">
+        <div class="container">
+            <div class="text-center reveal fade-up">
+                <h2>Popular Destinations</h2>
+                <p>Explore the most beautiful spots in Goa with us.</p>
+            </div>
+            <div class="grid grid-3" style="margin-top: 50px;">
+                <div class="dest-card reveal fade-up">
+                    <img src="https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=600&q=80" alt="Goa Beach" class="dest-img">
+                    <div class="dest-overlay">
+                        <h4>North Goa Beaches</h4>
+                        <p>Calangute, Baga, Anjuna</p>
+                    </div>
+                </div>
+                <div class="dest-card reveal fade-up delay-100">
+                    <img src="https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=600&q=80" alt="South Goa" class="dest-img">
+                    <div class="dest-overlay">
+                        <h4>South Goa serenity</h4>
+                        <p>Palolem, Colva, Agonda</p>
+                    </div>
+                </div>
+                <div class="dest-card reveal fade-up delay-200">
+                    <img src="https://images.unsplash.com/photo-1433838552652-f9a46b332c40?auto=format&fit=crop&w=600&q=80" alt="Waterfall" class="dest-img">
+                    <div class="dest-overlay">
+                        <h4>Eco Tourism</h4>
+                        <p>Dudhsagar Waterfalls & Spice Farms</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works (Old Content) -->
+    <section class="section">
+        <div class="container">
+            <div class="text-center reveal fade-up">
+                <h2>How It Works</h2>
+            </div>
+            <div class="timeline" style="margin-top: 50px;">
+                <div class="timeline-item reveal fade-left">
+                    <div class="timeline-dot"></div>
+                    <div class="glass-panel" style="padding: 24px; width: 100%;">
+                        <div style="font-size: 2rem; color: var(--secondary); margin-bottom: 10px;">01</div>
+                        <h3>Book Your Ride</h3>
+                        <p style="margin: 0;">Choose your destination and car type via our website or call.</p>
+                    </div>
+                </div>
+                <div class="timeline-item reveal fade-right">
+                    <div class="timeline-dot"></div>
+                    <div class="glass-panel" style="padding: 24px; width: 100%;">
+                        <div style="font-size: 2rem; color: var(--secondary); margin-bottom: 10px;">02</div>
+                        <h3>Get Confirmation</h3>
+                        <p style="margin: 0;">Receive driver details and vehicle number instantly.</p>
+                    </div>
+                </div>
+                <div class="timeline-item reveal fade-left">
+                    <div class="timeline-dot"></div>
+                    <div class="glass-panel" style="padding: 24px; width: 100%;">
+                        <div style="font-size: 2rem; color: var(--secondary); margin-bottom: 10px;">03</div>
+                        <h3>Enjoy the Ride</h3>
+                        <p style="margin: 0;">Sit back and relax while our driver takes you safely.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials (Old Content) -->
+    <section class="section" style="background: var(--background);">
+        <div class="container">
+            <div class="glass-card testimonial-card reveal fade-up" style="background: var(--grad-primary);">
+                <div class="text-center">
+                    <h2 style="color: white;">Happy Customers</h2>
+                    <i class="fas fa-quote-left" style="font-size: 2rem; color: var(--secondary); margin-bottom: 20px; display: block;"></i>
+                    <p style="color: rgba(255,255,255,0.9); font-size: 1.25rem; max-width: 800px; margin: 0 auto;">"The best taxi service in Goa! The driver was very polite and the car was spotless. Highly recommended for family trips."</p>
+                    
+                    <div class="user-profile justify-center">
+                        <div>
+                            <div style="display: flex; gap: 5px; justify-content: center; margin-bottom: 10px; color: var(--secondary);">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <h4 style="color: white; margin: 0;">Rahul Sharma</h4>
+                            <small style="color: var(--accent);">Tourist from Mumbai</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section (Old Content) -->
+    <section class="section text-center" style="background: url('https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&w=1600&q=80') center/cover fixed; position: relative;">
+        <div style="position: absolute; inset: 0; background: rgba(11, 31, 58, 0.85);"></div>
+        <div class="container" style="position: relative; z-index: 2; color: white;">
+            <h2 style="color: white; margin-bottom: 20px;">Ready to Explore Goa?</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 40px; color: rgba(255,255,255,0.9);">Book your ride today and get the best rates for your journey.</p>
+            <a href="contact.html" class="btn btn-primary btn-lg">Book Your Ride Today</a>
+        </div>
+    </section>
+
+    <!-- Footer (Old Content) -->
+    <footer class="footer">
+        <div class="container">
+            <div class="grid grid-4">
+                <div>
+                    <a href="index.html" class="logo" style="margin-bottom: 20px;">
+                        <i class="fas fa-route"></i> Near<span>Taxi</span>
+                    </a>
+                    <p>Your trusted travel partner in Goa. Safe, reliable, and premium taxi services.</p>
+                </div>
+                <div>
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-title">Services</h4>
+                    <ul>
+                        <li><a href="#">Airport Transfer</a></li>
+                        <li><a href="#">Railway Pickup</a></li>
+                        <li><a href="#">Sightseeing</a></li>
+                        <li><a href="#">Car Rental</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-title">Contact Us</h4>
+                    <ul>
+                        <li><i class="fas fa-phone-alt" style="color: var(--secondary); margin-right: 10px;"></i> +91 98765 43210</li>
+                        <li><i class="fas fa-envelope" style="color: var(--secondary); margin-right: 10px;"></i> info@neartawi.com</li>
+                        <li><i class="fas fa-map-marker-alt" style="color: var(--secondary); margin-right: 10px;"></i> Panjim, Goa, India</li>
+                    </ul>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 50px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1);">
+                <p>&copy; 2026 Near Taxi Service. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

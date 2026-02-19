@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Reviews - Near Taxi Service</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Page Loader -->
+    <div class="loader-wrapper">
+        <div class="loader-content">
+            <div class="cube-loader">
+                <div class="cube-top"></div>
+                <div class="cube-wrapper">
+                    <span style="--i:0" class="cube-span"></span>
+                    <span style="--i:1" class="cube-span"></span>
+                    <span style="--i:2" class="cube-span"></span>
+                    <span style="--i:3" class="cube-span"></span>
+                </div>
+            </div>
+            <div class="loader-text">Near<span>Taxi</span></div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-route"></i>
+                Near<span>Taxi</span>
+            </a>
+            <div class="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="tours.html" class="nav-link">Tours</a>
+                <a href="gallery.html" class="nav-link">Gallery</a>
+                <a href="faq.html" class="nav-link">FAQ</a>
+                <a href="testimonials.html" class="nav-link active">Reviews</a>
+                <a href="locations.html" class="nav-link">Locations</a>
+                <a href="contact.html" class="btn btn-primary btn-sm">Book Ride</a>
+            </div>
+            <div class="mobile-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header" style="background-image: url('https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=1920&q=80');">
+        <div class="page-header-content animate-on-scroll">
+            <h1 class="fade-up">Client Success Stories</h1>
+            <p class="fade-up delay-100">Don't just take our word for it—hear from the thousands of happy travelers we've served.</p>
+        </div>
+    </section>
+
+    <!-- Reviews Content -->
+    <section class="section">
+        <div class="container">
+            <div class="grid grid-3">
+                <!-- Review 1 -->
+                <div class="glass-card animate-on-scroll">
+                    <div class="flex items-center gap-2" style="margin-bottom: 20px;">
+                        <img src="https://ui-avatars.com/api/?name=Rahul+S&background=random" alt="Rahul" style="width: 50px; height: 50px; border-radius: 50%; box-shadow: var(--shadow-sm);">
+                        <div>
+                            <h5 style="margin: 0; font-size: 1.1rem;">Rahul Sharma</h5>
+                            <small style="color: var(--text-muted);">Mumbai, India</small>
+                        </div>
+                    </div>
+                    <p style="font-style: italic; color: #555;">"The best taxi service in Goa! The driver was very polite and the car was spotless. Highly recommended for family trips."</p>
+                    <div style="margin-top: 20px; color: #ffc107;">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="glass-card animate-on-scroll delay-100">
+                    <div class="flex items-center gap-2" style="margin-bottom: 20px;">
+                        <img src="https://ui-avatars.com/api/?name=Sarah+J&background=random" alt="Sarah" style="width: 50px; height: 50px; border-radius: 50%; box-shadow: var(--shadow-sm);">
+                        <div>
+                            <h5 style="margin: 0; font-size: 1.1rem;">Sarah Jenkins</h5>
+                            <small style="color: var(--text-muted);">London, UK</small>
+                        </div>
+                    </div>
+                    <p style="font-style: italic; color: #555;">"Very reliable airport transfer. The driver was waiting for us with a placard even though our flight was delayed."</p>
+                    <div style="margin-top: 20px; color: #ffc107;">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="glass-card animate-on-scroll delay-200">
+                    <div class="flex items-center gap-2" style="margin-bottom: 20px;">
+                        <img src="https://ui-avatars.com/api/?name=Amit+K&background=random" alt="Amit" style="width: 50px; height: 50px; border-radius: 50%; box-shadow: var(--shadow-sm);">
+                        <div>
+                            <h5 style="margin: 0; font-size: 1.1rem;">Amit Kumar</h5>
+                            <small style="color: var(--text-muted);">Delhi, India</small>
+                        </div>
+                    </div>
+                    <p style="font-style: italic; color: #555;">"Great experience with the South Goa tour package. The driver knew all the best spots and hidden gems."</p>
+                    <div style="margin-top: 20px; color: #ffc107;">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="section" style="padding-top: 0;">
+        <div class="container">
+            <div class="glass-card text-center animate-on-scroll" style="background: linear-gradient(135deg, rgba(30,144,255,0.1), rgba(0,212,255,0.05)); border: 1px solid rgba(30,144,255,0.2);">
+                <h2 style="margin-bottom: 1rem;">Ready for your own 5-star experience?</h2>
+                <p style="margin-bottom: 2rem;">Book your ride today and see why travelers love Near Taxi.</p>
+                <a href="contact.html" class="btn btn-primary">Book Now <i class="fas fa-arrow-right" style="margin-left: 8px;"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="grid grid-4">
+                <div>
+                    <a href="index.html" class="logo" style="margin-bottom: 20px;">
+                        <i class="fas fa-route"></i> Near<span>Taxi</span>
+                    </a>
+                    <p>Your trusted travel partner in Goa. Safe, reliable, and premium taxi services.</p>
+                </div>
+                <div>
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-title">Services</h4>
+                    <ul>
+                        <li><a href="#">Airport Transfer</a></li>
+                        <li><a href="#">Railway Pickup</a></li>
+                        <li><a href="#">Sightseeing</a></li>
+                        <li><a href="#">Car Rental</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-title">Contact Us</h4>
+                    <ul>
+                        <li><i class="fas fa-phone-alt" style="color: var(--secondary); margin-right: 10px;"></i> +91 98765 43210</li>
+                        <li><i class="fas fa-envelope" style="color: var(--secondary); margin-right: 10px;"></i> info@neartawi.com</li>
+                        <li><i class="fas fa-map-marker-alt" style="color: var(--secondary); margin-right: 10px;"></i> Panjim, Goa, India</li>
+                    </ul>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 50px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1);">
+                <p>&copy; 2026 Near Taxi Service. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

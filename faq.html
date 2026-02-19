@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - Near Taxi Service</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .accordion-item {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--radius-md);
+            margin-bottom: 20px;
+            overflow: hidden;
+            transition: 0.3s;
+            backdrop-filter: blur(10px);
+        }
+        .accordion-header {
+            padding: 20px 24px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: var(--primary);
+            transition: 0.3s;
+        }
+        .accordion-header:hover { background: rgba(30, 144, 255, 0.05); }
+        .accordion-header i { transition: transform 0.3s; color: var(--secondary); }
+        .accordion-header.active i { transform: rotate(180deg); }
+        .accordion-body {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s cubic-bezier(0, 1, 0, 1);
+            background: rgba(255,255,255,0.4);
+        }
+        .accordion-body p { padding: 0 24px 24px; color: var(--text-muted); line-height: 1.6; margin: 0; }
+        .accordion-item.active { box-shadow: var(--shadow-md); border-color: var(--secondary); }
+        .accordion-item.active .accordion-body { max-height: 200px; /* Approximate max height */ }
+    </style>
+</head>
+<body>
+    <!-- Page Loader -->
+    <div class="loader-wrapper">
+        <div class="loader-content">
+            <div class="cube-loader">
+                <div class="cube-top"></div>
+                <div class="cube-wrapper">
+                    <span style="--i:0" class="cube-span"></span>
+                    <span style="--i:1" class="cube-span"></span>
+                    <span style="--i:2" class="cube-span"></span>
+                    <span style="--i:3" class="cube-span"></span>
+                </div>
+            </div>
+            <div class="loader-text">Near<span>Taxi</span></div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-route"></i>
+                Near<span>Taxi</span>
+            </a>
+            <div class="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="tours.html" class="nav-link">Tours</a>
+                <a href="gallery.html" class="nav-link">Gallery</a>
+                <a href="faq.html" class="nav-link active">FAQ</a>
+                <a href="locations.html" class="nav-link">Locations</a>
+                <a href="contact.html" class="btn btn-primary btn-sm">Book Ride</a>
+            </div>
+            <div class="mobile-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header" style="background-image: url('https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=1920&q=80');">
+        <div class="page-header-content animate-on-scroll">
+            <h1 class="fade-up">Help & Support</h1>
+            <p class="fade-up delay-100">Answers to your common queries about bookings, pricing, and our services.</p>
+        </div>
+    </section>
+
+    <!-- FAQ Content -->
+    <section class="section">
+        <div class="container" style="max-width: 800px;">
+            <div class="accordion">
+                <!-- Item 1 -->
+                <div class="accordion-item animate-on-scroll">
+                    <div class="accordion-header">
+                        How do I book a taxi?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="accordion-body">
+                        <p>You can book a taxi through our website by filling out the booking form on the Contact page, or simply give us a call at our support number. We are available 24/7.</p>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="accordion-item animate-on-scroll delay-100">
+                    <div class="accordion-header">
+                        Are your prices fixed or metered?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="accordion-body">
+                        <p>For most routes, we offer fixed, transparent pricing with no hidden charges. For outstation trips, billing may be based on kilometers driven. Please ask our support team for a precise quote.</p>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="accordion-item animate-on-scroll delay-200">
+                    <div class="accordion-header">
+                        Do you offer airport pickups?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="accordion-body">
+                        <p>Yes, we specialize in airport transfers from both Dabolim (GOI) and Mopa (GOX) airports. Our drivers track your flight status to ensure timely pickups.</p>
+                    </div>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="accordion-item animate-on-scroll delay-300">
+                    <div class="accordion-header">
+                        Can I cancel my booking?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="accordion-body">
+                        <p>Yes, you can cancel your booking up to 2 hours before the scheduled pickup time without any cancellation fee. Late cancellations may incur a small charge.</p>
+                    </div>
+                </div>
+
+                 <!-- Item 5 -->
+                 <div class="accordion-item animate-on-scroll">
+                    <div class="accordion-header">
+                        Are your cars sanitized?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="accordion-body">
+                        <p>Absolutely. Hygiene is our top priority. All our vehicles are thoroughly cleaned and sanitized before every trip for your safety.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="grid grid-4">
+                <div>
+                    <a href="index.html" class="logo" style="margin-bottom: 20px;">
+                        <i class="fas fa-route"></i> Near<span>Taxi</span>
+                    </a>
+                    <p>Your trusted travel partner in Goa. Safe, reliable, and premium taxi services.</p>
+                </div>
+                <div>
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-title">Services</h4>
+                    <ul>
+                        <li><a href="#">Airport Transfer</a></li>
+                        <li><a href="#">Railway Pickup</a></li>
+                        <li><a href="#">Sightseeing</a></li>
+                        <li><a href="#">Car Rental</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-title">Contact Us</h4>
+                    <ul>
+                        <li><i class="fas fa-phone-alt" style="color: var(--secondary); margin-right: 10px;"></i> +91 98765 43210</li>
+                        <li><i class="fas fa-envelope" style="color: var(--secondary); margin-right: 10px;"></i> info@neartawi.com</li>
+                        <li><i class="fas fa-map-marker-alt" style="color: var(--secondary); margin-right: 10px;"></i> Panjim, Goa, India</li>
+                    </ul>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 50px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1);">
+                <p>&copy; 2026 Near Taxi Service. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        const headers = document.querySelectorAll('.accordion-header');
+        headers.forEach(header => {
+            header.addEventListener('click', () => {
+                const item = header.parentElement;
+                
+                // Close others (optional - for accordion behavior)
+                document.querySelectorAll('.accordion-item').forEach(i => {
+                    if(i !== item) {
+                        i.classList.remove('active');
+                        i.querySelector('.accordion-header').classList.remove('active');
+                        // Reset max-height logic handled by CSS transition usually, but let's be clean
+                        // i.querySelector('.accordion-body').style.maxHeight = null;
+                    }
+                });
+
+                item.classList.toggle('active');
+                header.classList.toggle('active');
+                
+                // For smoother transition if height varies
+                const body = item.querySelector('.accordion-body');
+                /* if (item.classList.contains('active')) {
+                    body.style.maxHeight = body.scrollHeight + "px";
+                } else {
+                    body.style.maxHeight = null;
+                } */
+            });
+        });
+    </script>
+</body>
+</html>
