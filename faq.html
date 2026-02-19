@@ -12,40 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
-    <style>
-        .accordion-item {
-            background: var(--glass-bg);
-            border: 1px solid var(--glass-border);
-            border-radius: var(--radius-md);
-            margin-bottom: 20px;
-            overflow: hidden;
-            transition: 0.3s;
-            backdrop-filter: blur(10px);
-        }
-        .accordion-header {
-            padding: 20px 24px;
-            font-weight: 600;
-            font-size: 1.1rem;
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            color: var(--primary);
-            transition: 0.3s;
-        }
-        .accordion-header:hover { background: rgba(30, 144, 255, 0.05); }
-        .accordion-header i { transition: transform 0.3s; color: var(--secondary); }
-        .accordion-header.active i { transform: rotate(180deg); }
-        .accordion-body {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.4s cubic-bezier(0, 1, 0, 1);
-            background: rgba(255,255,255,0.4);
-        }
-        .accordion-body p { padding: 0 24px 24px; color: var(--text-muted); line-height: 1.6; margin: 0; }
-        .accordion-item.active { box-shadow: var(--shadow-md); border-color: var(--secondary); }
-        .accordion-item.active .accordion-body { max-height: 200px; /* Approximate max height */ }
-    </style>
+
 </head>
 <body>
     <!-- Page Loader -->
@@ -88,7 +55,7 @@
     </nav>
 
     <!-- Page Header -->
-    <section class="page-header" style="background-image: url('https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=1920&q=80');">
+    <section class="page-header" style="background-image: url('https://images.unsplash.com/photo-1556740758-90de374c12ad?auto=format&fit=crop&w=1920&q=80');">
         <div class="page-header-content animate-on-scroll">
             <h1 class="fade-up">Help & Support</h1>
             <p class="fade-up delay-100">Answers to your common queries about bookings, pricing, and our services.</p>
@@ -179,17 +146,17 @@
                 <div>
                     <h4 class="footer-title">Services</h4>
                     <ul>
-                        <li><a href="#">Airport Transfer</a></li>
-                        <li><a href="#">Railway Pickup</a></li>
-                        <li><a href="#">Sightseeing</a></li>
-                        <li><a href="#">Car Rental</a></li>
+                        <li><a href="services.html#airport">Airport Transfer</a></li>
+                        <li><a href="services.html#railway">Railway Pickup</a></li>
+                        <li><a href="services.html#sightseeing">Sightseeing</a></li>
+                        <li><a href="services.html#rental">Car Rental</a></li>
                     </ul>
                 </div>
                 <div>
                     <h4 class="footer-title">Contact Us</h4>
                     <ul>
                         <li><i class="fas fa-phone-alt" style="color: var(--secondary); margin-right: 10px;"></i> +91 98765 43210</li>
-                        <li><i class="fas fa-envelope" style="color: var(--secondary); margin-right: 10px;"></i> info@neartawi.com</li>
+                        <li><i class="fas fa-envelope" style="color: var(--secondary); margin-right: 10px;"></i> info@neartaxi.com</li>
                         <li><i class="fas fa-map-marker-alt" style="color: var(--secondary); margin-right: 10px;"></i> Panjim, Goa, India</li>
                     </ul>
                 </div>
@@ -201,34 +168,6 @@
     </footer>
 
     <script src="script.js"></script>
-    <script>
-        const headers = document.querySelectorAll('.accordion-header');
-        headers.forEach(header => {
-            header.addEventListener('click', () => {
-                const item = header.parentElement;
-                
-                // Close others (optional - for accordion behavior)
-                document.querySelectorAll('.accordion-item').forEach(i => {
-                    if(i !== item) {
-                        i.classList.remove('active');
-                        i.querySelector('.accordion-header').classList.remove('active');
-                        // Reset max-height logic handled by CSS transition usually, but let's be clean
-                        // i.querySelector('.accordion-body').style.maxHeight = null;
-                    }
-                });
 
-                item.classList.toggle('active');
-                header.classList.toggle('active');
-                
-                // For smoother transition if height varies
-                const body = item.querySelector('.accordion-body');
-                /* if (item.classList.contains('active')) {
-                    body.style.maxHeight = body.scrollHeight + "px";
-                } else {
-                    body.style.maxHeight = null;
-                } */
-            });
-        });
-    </script>
 </body>
 </html>

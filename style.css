@@ -127,7 +127,7 @@ h3 { font-size: 1.8rem; font-weight: 600; margin-bottom: 0.5rem; }
 
 p { color: var(--text-muted); font-size: 1.1rem; margin-bottom: 1.5rem; }
 
-a { text-decoration: none; color: inherit; transition: 0.3s ease; cursor: none; }
+a { text-decoration: none; color: inherit; transition: 0.3s ease; }
 ul { list-style: none; }
 img { max-width: 100%; display: block; }
 
@@ -201,6 +201,7 @@ img { max-width: 100%; display: block; }
 .hero-actions {
     margin-top: 32px;
     display: flex;
+    justify-content: center; /* Center buttons */
     gap: 16px;
     flex-wrap: wrap;
 }
@@ -440,22 +441,25 @@ img { max-width: 100%; display: block; }
 
 .hero-wrapper {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    gap: 60px;
+    justify-content: center;
+    gap: 40px;
     position: relative;
     z-index: 5; 
     width: 100%;
+    text-align: center;
 }
 
 .hero-content {
     flex: 1;
-    max-width: 700px;
+    max-width: 900px; /* Increased max-width for centered layout */
+    margin: 0 auto;
 }
 
 .hero-content h1 {
     font-size: 5.5rem;
-    line-height: 1;
+    line-height: 1.1;
     margin-bottom: 30px;
     color: white;
     text-shadow: 0 10px 30px rgba(0,0,0,0.5);
@@ -469,44 +473,7 @@ img { max-width: 100%; display: block; }
     font-weight: 300;
 }
 
-.hero-visual {
-    flex: 1;
-    position: relative;
-    height: 600px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    perspective: 1000px;
-}
-
-/* Enhanced 3D Badges */
-.floating-badge {
-    position: absolute;
-    background: rgba(20, 30, 50, 0.6);
-    backdrop-filter: blur(16px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 16px 24px;
-    border-radius: 100px;
-    color: white;
-    font-weight: 500;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
-    animation: floatBadge 8s ease-in-out infinite;
-    z-index: 10;
-}
-
-.badge-icon {
-    width: 40px; height: 40px;
-    background: var(--grad-accent);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1rem;
-    box-shadow: 0 0 15px var(--secondary);
-}
+/* Hero Visual Styles Removed */
 
 .badge-1 { top: 15%; left: -50px; animation-delay: 0s; }
 .badge-2 { bottom: 15%; right: -50px; animation-delay: 2s; }
@@ -660,36 +627,312 @@ img { max-width: 100%; display: block; }
 /* =========================================
    10. RESPONSIVE
    ========================================= */
-@media (max-width: 1024px) {
-    :root { --container: 900px; }
-    .hero-wrapper { flex-direction: column; text-align: center; }
-    .hero-content { margin-bottom: 40px; }
-    .hero-visual { height: 400px; width: 100%; }
-    .grid-4, .grid-3 { grid-template-columns: repeat(2, 1fr); }
-    .timeline::before { left: 20px; }
-    .timeline-item { width: 100%; padding-left: 60px; padding-right: 0; margin-left: 0; justify-content: flex-start; }
-    .timeline-item:nth-child(even) { padding-left: 60px; }
-    .timeline-dot { left: 8px !important; right: auto; }
+/* =========================================
+   10. BOOKING FORM (New)
+   ========================================= */
+.booking-form {
+    padding: 24px;
+    margin-top: 30px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(16px);
 }
 
-@media (max-width: 768px) {
-    .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
+.form-grid {
+    display: grid;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.booking-form .form-group {
+    margin-bottom: 0;
+}
+
+.booking-form label {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.booking-form label i { color: var(--secondary); margin-right: 6px; }
+
+.booking-form .form-input {
+    padding: 12px 16px;
+    font-size: 0.95rem;
+    height: 48px; /* Touch friendly height */
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: var(--radius-sm);
+}
+
+.booking-form select.form-input {
+    color: var(--text-muted); /* Placeholder color for select */
+}
+.booking-form select.form-input option {
+    background: var(--surface);
+    color: white;
+}
+
+
+/* =========================================
+   11. RESPONSIVE & MOBILE FIRST OPTIMIZATIONS
+   ========================================= */
+
+/* Large Desktop (1280px+) */
+@media (min-width: 1280px) {
+    .container { max-width: 1200px; }
+    .form-grid { grid-template-columns: repeat(2, 1fr); } /* 2 col form on desktop hero */
+}
+
+/* Laptop (1024px - 1279px) */
+@media (max-width: 1279px) {
+    .container { max-width: 960px; }
     
-    /* Improve mobile nav visibility */
-    .mobile-toggle { display: block; }
+    h1 { font-size: 4rem; }
+    h2 { font-size: 3rem; }
     
-    .timeline-item {
-        padding: 30px;
-        background: rgba(255,255,255,0.05);
-        border-radius: var(--radius-lg);
-        margin-bottom: 30px;
+    .hero-content { max-width: 550px; }
+    .hero-visual { height: 500px; }
+    
+    .grid-4 { grid-template-columns: repeat(2, 1fr); }
+    .bento-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* Tablet (768px - 1023px) */
+@media (max-width: 1023px) {
+    .container { max-width: 720px; padding: 0 32px; }
+    
+    /* Layout Changes */
+    .hero-wrapper { 
+        flex-direction: column; 
+        text-align: center; 
+        gap: 40px;
+        padding-top: 40px;
     }
     
-    h1 { font-size: 3rem; }
-    h2 { font-size: 2.5rem; }
+    .hero-content { margin: 0 auto; max-width: 100%; }
+    .hero-content h1 { font-size: 3.5rem; }
+    .hero-content p { margin: 0 auto 30px; }
     
-    .cursor-dot, .cursor-outline { display: none; } /* Hide custom cursor on touch */
-    *, *::before, *::after { cursor: auto; }
+    .hero-visual { 
+        width: 100%; 
+        height: 400px;
+        /* Default stacking (visual below text) works well now */
+    }
+
+    /* Form Adjustment (if form existed, but now removed, keep for legacy or different page forms) */
+    .form-grid { grid-template-columns: 1fr 1fr; }
+    
+    /* Grids */
+    .grid-3, .grid-4 { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+    
+    /* Timeline adjustments */
+    .timeline::before { left: 40px; }
+    .timeline-item { width: 100%; padding-left: 80px; padding-right: 0; margin-left: 0; justify-content: flex-start; }
+    .timeline-item:nth-child(even) { padding-left: 80px; align-self: flex-start; }
+    .timeline-dot { left: 28px !important; right: auto; }
+}
+
+/* Mobile Large (Standard Mobile breakpoint < 768px) */
+@media (max-width: 767px) {
+    .container { width: 100%; padding: 0 20px; }
+    
+    /* Typography Scaling */
+    html { font-size: 15px; } /* Slightly smaller base */
+    h1 { font-size: 2.25rem; line-height: 1.2; }
+    h2 { font-size: 1.75rem; margin-bottom: 16px; }
+    h3 { font-size: 1.35rem; }
+    p { font-size: 1rem; line-height: 1.5; }
+    
+    /* Section Spacing */
+    .section { padding: 50px 0; }
+    
+    /* Grids -> Single Column */
+    .grid, .grid-2, .grid-3, .grid-4, .form-grid {
+        grid-template-columns: 1fr;
+        gap: 20px; 
+    }
+    
+    /* Hero Section Mobile */
+    .hero { 
+        padding-top: calc(var(--header-height) + 20px); 
+        min-height: auto; 
+        padding-bottom: 60px;
+        text-align: center; /* Ensure centered content */
+    }
+    
+    .hero-wrapper { 
+        gap: 30px; 
+        display: flex;
+        flex-direction: column;
+    }
+
+    .hero-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center buttons */
+    }
+
+    .hero-actions {
+        justify-content: center; /* Center buttons */
+        width: 100%;
+    }
+
+    .btn { margin-bottom: 10px; width: 100%; max-width: 320px; } /* Clean stacking buttons */
+
+    .hero-content h1 br { display: none; }
+    
+    .hero-car-img {
+        width: 100% !important;
+        height: auto !important;
+        max-height: 300px;
+        object-fit: cover;
+        transform: none !important; /* Reset 3D transform on mobile for simplicity */
+        margin-top: 20px;
+    }
+    
+    .hero-visual { 
+        height: auto; 
+        margin-top: 0;
+        display: flex;
+        justify-content: center; 
+    }
+    
+    /* Booking Form Mobile */
+    .booking-form { padding: 20px; border-radius: var(--radius-md); }
+    .booking-form .form-input { height: 50px; font-size: 1rem; } /* Larger touch target */
+    .btn { width: 100%; padding: 14px 20px; font-size: 1rem; }
+    
+    /* Navbar Mobile */
+    .navbar { height: 70px; }
+    .navbar.scrolled { height: 60px; }
+    .logo { font-size: 1.5rem; }
+    
+    .mobile-toggle { 
+        display: flex; 
+        align-items: center; 
+        justify-content: center;
+        width: 44px; height: 44px; /* Minimum touch target */
+        background: rgba(255,255,255,0.05);
+        border-radius: 12px;
+        transition: 0.3s;
+    }
+    /* Mobile Drawer Menu - Redesigned */
+    .nav-menu {
+        position: fixed;
+        top: 0; 
+        right: -100%; /* Start off-screen right */
+        left: auto !important; /* Force override of any left positioning */
+        width: 300px; /* Fixed width for standard mobile drawer feel */
+        max-width: 80vw;
+        height: 100vh;
+        background: #0a1018; /* Solid dark color matching brand */
+        flex-direction: column;
+        justify-content: flex-start; 
+        padding: 90px 20px 40px; /* Reduced top padding */
+        gap: 5px; /* Override global 40px gap */
+        transition: right 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        z-index: 1000;
+        border-left: 1px solid rgba(255,255,255,0.1);
+        box-shadow: -5px 0 30px rgba(0,0,0,0.5);
+    }
+    
+    .nav-menu.active { right: 0; }
+    
+    /* Overlay */
+    .nav-menu.active::before {
+        content: '';
+        position: fixed;
+        top: 0; left: -100vw; 
+        width: 200vw; height: 100vh;
+        background: rgba(0,0,0,0.7);
+        backdrop-filter: blur(3px);
+        z-index: -1;
+        opacity: 0;
+        transition: opacity 0.3s;
+        pointer-events: none;
+    }
+    
+    .nav-menu.active::before { opacity: 1; }
+    
+    /* Toggle Button Position */
+    .mobile-toggle { 
+        z-index: 1001; 
+        position: relative; 
+    }
+    
+    .nav-link {
+        font-size: 1.1rem;
+        margin: 0;
+        width: 100%;
+        text-align: left;
+        display: flex;
+        align-items: center;
+        justify-content: space-between; /* Space for icon */
+        padding: 14px 20px;
+        border-radius: 8px;
+        border-bottom: 1px solid rgba(255,255,255,0.03);
+        color: #cfd8e3;
+        background: transparent;
+    }
+    
+    .nav-link:hover, .nav-link:active, .nav-link.active {
+        background: rgba(59, 130, 246, 0.15);
+        color: white;
+        padding-left: 25px; /* Slide animation */
+        border-color: transparent;
+    }
+    
+    .nav-link::after { display: none; } 
+    
+    /* Icon styling */
+    .nav-link::before {
+        content: '\f0da'; /* FontAwesome caret right */
+        font-family: 'Font Awesome 6 Free';
+        font-weight: 900;
+        order: 2; /* Put icon on the right */
+        font-size: 0.9rem;
+        color: var(--secondary);
+        transition: 0.3s;
+    }
+
+    .nav-link:hover::before {
+        transform: translateX(5px);
+    }
+    
+    /* Footer Mobile */
+    .footer { text-align: center; padding: 60px 0 30px; }
+    .footer .grid-4 { gap: 40px; }
+    .footer-title { margin-bottom: 20px; font-size: 1.2rem; }
+    .footer ul li a { display: block; padding: 10px; /* Touch target */ }
+    
+    /* Timeline Mobile */
+    .timeline::before { left: 20px; }
+    .timeline-dot { left: 8px !important; width: 20px; height: 20px; border-width: 3px; }
+    .timeline-item { padding-left: 50px; padding: 20px 20px 20px 50px; }
+    
+    /* Hide/Simplify Visuals */
+    .hero-visual { height: 250px; margin-top: 20px; }
+    .floating-badge { padding: 10px 16px; font-size: 0.8rem; }
+    .badge-icon { width: 32px; height: 32px; font-size: 0.9rem; }
+    
+    /* Micro-interactions */
+    .glass-card:active { transform: scale(0.98); }
+    .btn:active { transform: scale(0.98); box-shadow: none; }
+    
+    /* Force default cursor for touch */
+    .cursor-dot, .cursor-outline { display: none; } 
+    *, *::before, *::after { cursor: auto !important; }
+}
+
+/* Small Mobile (320px - 375px) */
+@media (max-width: 400px) {
+    h1 { font-size: 1.8rem; }
+    .hero-content p { font-size: 0.95rem; }
+    .floating-badge { display: none; } /* Remove clutter on very small screens */
+    .timeline-item { padding: 15px 15px 15px 45px; }
+    .section { padding: 40px 0; }
 }
 
 /* =========================================
@@ -1016,3 +1259,54 @@ img { max-width: 100%; display: block; }
     width: 100%;
 }
 
+/* =========================================
+   12. FAQ ACCORDION
+   ========================================= */
+.accordion-item {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-md);
+    margin-bottom: 20px;
+    overflow: hidden;
+    transition: 0.3s;
+    backdrop-filter: blur(10px);
+}
+.accordion-header {
+    padding: 20px 24px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white; /* Changed to white for better visibility on dark bg */
+    transition: 0.3s;
+}
+.accordion-header:hover { background: rgba(30, 144, 255, 0.05); }
+.accordion-header i { transition: transform 0.3s; color: var(--secondary); }
+.accordion-header.active i { transform: rotate(180deg); }
+.accordion-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s cubic-bezier(0, 1, 0, 1);
+    background: rgba(255,255,255,0.03); /* Changed to transparent/darker */
+}
+.accordion-body p { padding: 0 24px 24px; color: var(--text-muted); line-height: 1.6; margin: 0; }
+.accordion-item.active { box-shadow: var(--shadow-md); border-color: var(--secondary); }
+.accordion-item.active .accordion-body { max-height: 200px; }
+
+
+/* =========================================
+   13. GLOBAL CURSOR RESET (Fix for visibility issues)
+   ========================================= */
+html, body, .cursor-dot, .cursor-outline, * {
+    cursor: auto !important;
+}
+
+a, button, .btn, .mobile-toggle, .nav-link, select, input[type="submit"], input[type="button"], label, .accordion-header, .dest-card {
+    cursor: pointer !important;
+}
+
+.form-input {
+    cursor: text !important;
+}

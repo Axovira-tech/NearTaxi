@@ -22,10 +22,18 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // 2. Mobile Menu Toggle
+    // 2. Mobile Menu & Active Link
     const mobileToggle = document.querySelector('.mobile-toggle');
     const navMenu = document.querySelector('.nav-menu');
     const navLinks = document.querySelectorAll('.nav-link');
+
+    // Set Active Link Logic
+    const currentPath = window.location.pathname.split("/").pop() || "index.html"; 
+    navLinks.forEach(link => {
+        if(link.getAttribute('href') === currentPath) {
+            link.classList.add('active');
+        }
+    });
 
     mobileToggle.addEventListener('click', () => {
         navMenu.classList.toggle('active');
@@ -38,6 +46,14 @@ document.addEventListener('DOMContentLoaded', () => {
             navMenu.classList.remove('active');
             mobileToggle.classList.remove('active');
         });
+    });
+
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!navMenu.contains(e.target) && !mobileToggle.contains(e.target) && navMenu.classList.contains('active')) {
+            navMenu.classList.remove('active');
+            mobileToggle.classList.remove('active');
+        }
     });
 
     // 3. Scroll Reveal Animations
@@ -115,5 +131,35 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
     console.log("Near Taxi Premium UI Loaded 🚀");
+
+    // 7. FAQ Accordion Logic
+    const headers = document.querySelectorAll('.accordion-header');
+    headers.forEach(header => {
+        header.addEventListener('click', () => {
+            const item = header.parentElement;
+            
+            // Close others (optional)
+            document.querySelectorAll('.accordion-item').forEach(i => {
+                if(i !== item) {
+                    i.classList.remove('active');
+                    i.querySelector('.accordion-header').classList.remove('active');
+                    // Reset max-height logic
+                    const otherBody = i.querySelector('.accordion-body');
+                    if(otherBody) otherBody.style.maxHeight = null;
+                }
+            });
+
+            item.classList.toggle('active');
+            header.classList.toggle('active');
+            
+            // For smooth transition
+            const body = item.querySelector('.accordion-body');
+            if (item.classList.contains('active')) {
+                body.style.maxHeight = body.scrollHeight + "px";
+            } else {
+                body.style.maxHeight = null;
+            }
+        });
+    });
 
 });
